@@ -1,0 +1,15 @@
+{
+  "name": "improved-development-workflow",
+  "version": "1.0.0",
+  "description": "Improved Development Workflow of Udemy Course",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "author": "Kenneth Carroll",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
