@@ -1,2 +1,15 @@
 This repository is being used to store work as is completed using this highly recommended Udemy Course:
 https://www.udemy.com/course/nodejs-the-complete-guide/
+
+* Understanding the Basics
+    - A very basic usage of nodejs and routes
+
+* Improved Development Workflow
+    - Instructions on custom packages, npm init, and using various npm workflows and debugging
+
+* Working With ExpressJS
+    - An in depth introduction to ExpressJS
+    - Multiple Usages of MiddleWare
+    - Demonstration of Routing and the path visibility for a nodejs app
+    - Filtering both on route strings and on method of accessing the route
+    - Statically Serve Files like HTML and CSS to the end user
