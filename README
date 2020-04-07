@@ -13,3 +13,10 @@ https://www.udemy.com/course/nodejs-the-complete-guide/
     - Demonstration of Routing and the path visibility for a nodejs app
     - Filtering both on route strings and on method of accessing the route
     - Statically Serve Files like HTML and CSS to the end user
+
+* Dynamic Content and Template Engines
+    - Learned how to convert HTML files into dynamically loaded content using template engines PUG, EJS, and Handlebars.
+      I will be sticking to PUG for the remainder of the course but the lectures are using EJS format. 
+
+* Model View Control (In Progress)
+    - Learn the basics of the Model View Controller architecture and conver tehe project ot use MVC
