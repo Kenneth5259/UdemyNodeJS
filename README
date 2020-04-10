@@ -20,3 +20,4 @@ https://www.udemy.com/course/nodejs-the-complete-guide/
 
 * Model View Control (In Progress)
     - Learn the basics of the Model View Controller architecture and conver tehe project ot use MVC
+    - Implemented file read/write to allow for proper utilization of a model
