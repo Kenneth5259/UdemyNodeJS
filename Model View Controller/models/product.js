@@ -12,25 +12,28 @@ const getProductsFromFile = (cb) => {
         if(err) {
             return cb([]);
         }
-        cb(JSON.parse(fileContent))
+        return cb(JSON.parse(fileContent));
     });
 };
 
 
 let products = [];
 module.exports = class Product {
-   constructor(t) {
-        this.title=t;
+   constructor(title, imageURL, price, description) {
+        this.title=title;
+        this.imageURL=imageURL;
+        this.price=price;
+        this.description=description;
    } 
    save() {
-       getProductsFromFile(products => {
-        products.push(this);
-        fs.writeFile(p, JSON.stringify(products), (err) => {
-            if(err) {
-                console.log(err);
-            }
+        getProductsFromFile(products => {
+            products.push(this);
+            fs.writeFile(p, JSON.stringify(products), (err) => {
+                if(err) {
+                    console.log(err);
+                }
+            });
         });
-       });
 
    }
 
