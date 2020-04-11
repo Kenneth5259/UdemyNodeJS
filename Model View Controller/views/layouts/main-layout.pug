@@ -14,7 +14,15 @@ html(lang="en")
             nav.main-header__nav
                 ul.main-header__item-list
                     li.main-header__item
-                        a(href="/", class=(activeShop ? 'active' : '')) Shop
+                        a(href="/", class=(path==='/' ? 'active' : '')) Shop
+                    li.main-header__item
+                        a(href="/shop/products-list", class=(path==='shop/products-list' ? 'active' : '')) Product List
+                    li.main-header__item
+                        a(href="/shop/cart", class=(path==='shop/cart' ? 'active' : '')) Cart
                     li.main-header__item
                         a(href='/admin/add-product', class=(path==='admin/add-product' ? 'active' : '')) Add Product
+                    li.main-header__item
+                        a(href='/admin/edit-product', class=(path==='admin/edit-product' ? 'active' : '')) Edit Product
+                    li.main-header__item
+                        a(href='/admin/products', class=(path==='admin/products' ? 'active' : '')) Admin Product List
         block content
