@@ -48,5 +48,9 @@ exports.getCheckout = (req, res, next) => {
     });
 };
 exports.getProductDetails = (req, res, next) => {
-    res.redirect('');
+    const prodId = req.params.productId;
+    Product.findById(prodId, product => {
+        console.log(product);
+    });
+    res.redirect('/');
 };
