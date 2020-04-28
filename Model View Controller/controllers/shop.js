@@ -50,7 +50,10 @@ exports.getCheckout = (req, res, next) => {
 exports.getProductDetails = (req, res, next) => {
     const prodId = req.params.productId;
     Product.findById(prodId, product => {
-        console.log(product);
+        res.render('shop/product-detail', {
+            product: product, 
+            docTitle: product.title,
+            path: 'shop/products-list'
+        });
     });
-    res.redirect('/');
 };
