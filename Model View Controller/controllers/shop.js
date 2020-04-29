@@ -29,10 +29,26 @@ exports.getIndex =  (req, res, next) => {
 
 
 exports.getCart = (req, res, next) => {
-    res.render('shop/cart',  {
-        path: 'shop/cart', 
-        docTitle: 'Your Cart'
+    Cart.getCart(cart => {
+        Product.fetchAll(products => {
+            const cartProducts = [];
+            if(cart) {
+                for(product of products) {
+                    const cartProductData = cart.products.find(prod => prod.id === product.id);
+                    if(cartProductData){
+                        cartProducts.push({productData: product, quantity:cartProductData.quantity});
+                    }
+                }
+            }
+            res.render('shop/cart',  {
+                path: 'shop/cart', 
+                docTitle: 'Your Cart',
+                products: cartProducts
+            }); 
+        });
+        
     });
+    
 };
 
 exports.postCart = (req, res, next) => {
@@ -40,7 +56,7 @@ exports.postCart = (req, res, next) => {
     Product.findById(prodId, (products) =>{
         Cart.addProduct(prodId, products.price);
     })
-    res.render('shop/cart');
+    res.redirect('/shop/cart');
 }
 
 exports.getOrders = (req, res, next) => {
